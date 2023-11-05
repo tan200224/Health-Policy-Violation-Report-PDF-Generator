@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elon Computer Science</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- <header class="header">
+        <a href="#" class="logo">Logo</a>
+
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+        </nav> -->
+   
+
+
+
+
+
+
+
+    <div class="banner1">                    
+        <img src="image/HosPic4.jpg">
+        <div class="text-box">
+            
+            <!-- <h1 data-text="Welcome to the Future...">Welcome to C.O.</h1>  -->
+
+            <h1>Welcome to C.O.<div class="roller">
+                <span id="rolltext">Quick<br/>
+                Fast<br/>
+                Effective<br/>
+                <span id="spare-time">not much spare time?</span><br/>
+                </div>
+                </h1>
+                
+              </div>
+
+
+
+            <span></span>
+            <!-- <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button id="send-button">Send</button>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="banner2">
+        <img src="image/HosPic1.jpg">
+        <div class="text-box">
+            <!-- <h1 data-text="Welcome to C.O.">Welcome to C.O.</h1> -->
+
+
+            <h1>Welcome to C.O.<div class="roller">
+                <span id="rolltext">Quick<br/>
+                Fast<br/>
+                Effective<br/>
+                <span id="spare-time">not much spare time?</span><br/>
+                </div>
+                </h1>
+                
+              </div> 
+
+
+
+
+
+            <span></span>
+            <!-- <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button id="send-button">Send</button>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="banner3">
+        <img src="image/HosPic2.jpg">
+        <div class="text-box">
+            <!-- <h1 data-text="Welcome to C.O.">Welcome to C.O.</h1> -->
+
+
+
+
+            <h1>Welcome to C.O.<div class="roller">
+                <span id="rolltext">Quick<br/>
+                Fast<br/>
+                Effective<br/>
+                <span id="spare-time">not much spare time?</span><br/>
+                </div>
+                </h1>
+
+
+            <span></span>
+            <!-- <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button id="send-button">Send</button>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="banner4">
+        <img src="image/HosPic3.jpg">
+        <div class="text-box">
+            <!-- <h1 data-text="Welcome to C.O.">Welcome to C.O.</h1> -->
+
+
+
+           <h1>Welcome to C.O.<div class="roller">
+                <span id="rolltext">Quick<br/>
+                Fast<br/>
+                Effective<br/>
+                <span id="spare-time">not much spare time?</span><br/>
+                </div>
+                </h1>
+
+
+
+
+            <span></span>
+            <!-- <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button id="send-button">Send</button>
+            </div> -->
+        </div>
+    </div>
+    <p class="sub typed"></p>
+    
+    <!-- <div class="chat-input">
+      
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button id="send-button">Send</button>
+    </div> -->
+
+
+    <div class="container">
+    <div class="chat-input">
+    <form action="/classify" method="post">
+        <label for="input" class="form-label">Write or paste movie review text below</label>
+        <textarea class="form-control" id='input' placeholder="Type your message..."name='input' required='required' rows='3'></textarea>
+        <button type="send-button" class="btn btn-primary" id='send-button'>Send</button>
+    </div>
+      <div class="chat-input">
+      
+          <!-- <input type="text" ids="input" placeholder="Type your message..."> -->
+
+      </div>
+    </form>
+  </div>
+<div class="container">
+
+    <script>
+        // Function to add a user message to the chat
+        function addUserMessage(message) {
+            const messages = document.querySelector('.chat-messages');
+            const userMessage = document.createElement('div');
+            userMessage.className = 'user-message';
+            userMessage.textContent = message;
+            messages.appendChild(userMessage);
+        }
+    
+        // Function to add a bot response to the chat
+        function addBotMessage(message) {
+            const messages = document.querySelector('.chat-messages');
+            const botMessage = document.createElement('div');
+            botMessage.className = 'bot-message';
+            botMessage.textContent = message;
+            messages.appendChild(botMessage);
+        }
+    
+        // Function to handle user input and simulate bot responses
+        function handleUserInput() {
+            const userInput = document.getElementById('user-input').value;
+            if (userInput.trim() === '') return;
+    
+            addUserMessage(userInput);
+            document.getElementById('user-input').value = '';
+    
+            // Simulate a bot response (you can replace this with actual logic)
+            setTimeout(() => {
+                addBotMessage('This is a simulated bot response.');
+            }, 1000);
+        }
+    
+        // Listen for user input and trigger bot responses on Enter key or button click
+        document.getElementById('user-input').addEventListener('keyup', (event) => {
+            if (event.key === 'Enter') {
+                handleUserInput();
+            }
+        });
+    
+        document.getElementById('send-button').addEventListener('click', () => {
+            handleUserInput();
+        });
+
+        // Initialize OpenAI API with your API key
+    const apiKey = 'OPENAI_API_KEY="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';
+    const openai = require('openai');
+    const gpt3 = new openai(apiKey);
+
+    // Function to send user input to the API and display the response
+    async function getBotResponse(userInput) {
+        try {
+            const response = await gpt3.create({
+                engine: 'davinci',
+                prompt: `You are a helpful assistant.\nUser: ${userInput}\nAssistant:`,
+            });
+
+            const botMessage = response.choices[0].text.trim();
+            addBotMessage(botMessage);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+    </script>
+    
+<style>
+  /* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+} */
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+    background: #252839;
+    min-height: 5000px;
+    padding-top: 60px;
+    
+    
+
+}
+
+
+
+
+/* h1{
+    position: absolute;
+    font-size: 4.1vw;
+    color: #F9F6EE;
+    -webkit-text-stroke: 0.1vw black;
+    text-transform: uppercase;
+    top: 100px;
+    left: 50px;
+    
+    
+    
+}
+h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: black;
+    /* -webkit-text-stroke: 0vw black; */
+    /* border-right: 2px solid white; */
+    /* overflow: hidden; */
+    /* animation: animate 10s linear infinite; */
+    
+
+
+/* }  */
+/* @keyframes animate {
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,100%{
+        width: 100%;
+    }
+}  */
+
+
+/* .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    position: relative;
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition: .3s;
+}
+
+.navbar a:hover::before{
+    width: 100%;
+}
+ */
+
+
+
+
+
+
+
+
+
+
+ .banner1, .banner2, .banner3, .banner4{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: black;
+    text-shadow: 5px 5px #1B1212;
+}
+
+img{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+    animation: zoom-out 6s linear infinite;
+}
+
+@keyframes zoom-out {
+    100%{
+        width: 100%;
+    }
+}
+
+.text-box{
+    width: 600px;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    color: white;
+    animation: textup 12s linear infinite;
+    transform: translateY(100px);
+    z-index: 1;
+}
+text-box h1{
+    margin-bottom: 40px;
+
+}
+
+text-box p{
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 80px;
+}
+text-box span{
+    background-color: red;
+    height: 1px;
+    width: 100px;
+    position: absolute;
+    left: 0;
+
+}
+
+.banner1{
+    animation: pic1 12s linear infinite;
+}
+
+.banner2{
+    animation: pic2 12s linear infinite;
+}
+
+.banner3{
+    animation: pic3 12s linear infinite;
+}
+
+.banner4{
+    animation: pic4 12s linear infinite;
+}
+
+@keyframes pic1{
+    0%{
+        visibility: visible;
+    }
+
+    25%{
+        visibility: hidden;
+    }
+
+    50%{
+        visibility: hidden;
+    }
+
+    75%{
+        visibility: hidden;
+    }
+
+    100%{
+        visibility: visible;
+    } 
+}
+
+@keyframes pic2{
+    0%{
+        visibility: hidden;
+    }
+
+    25%{
+        visibility: hidden;
+    }
+
+    50%{
+        visibility: visible;
+    }
+
+    75%{
+        visibility: hidden;
+    }
+
+    100%{
+        visibility: hidden;
+    } 
+}
+
+@keyframes pic3{
+    0%{
+        visibility: hidden;
+    }
+
+    25%{
+        visibility: hidden;
+    }
+
+    50%{
+        visibility: hidden;
+    }
+
+    75%{
+        visibility: visible;
+    }
+
+    100%{
+        visibility: hidden;
+    } 
+}
+
+@keyframes pic4{
+    0%{
+        visibility: hidden;
+    }
+
+    25%{
+        visibility: hidden;
+    }
+
+    50%{
+        visibility: hidden;
+    }
+
+    75%{
+        visibility: hidden;
+    }
+
+    100%{
+        visibility: visible;
+    } 
+} 
+
+@keyframes textup{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+} 
+
+
+
+
+
+.chat-input {
+    /* display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-top: 1px solid #ccc; */
+
+    position: absolute;
+    top: 55%; /* Adjust the top property to position the chat input as needed */
+    left: 27%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+
+
+.user-message {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px 10px;
+    align-self: flex-start;
+}
+
+.bot-message {
+    background-color: #3498db;
+    color: #fff;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px 10px;
+    align-self: flex-end;
+}
+
+
+
+
+h1{
+    text-align:center;
+    text-transform: uppercase;
+    color: #F9F6EE; 
+    font-size: 4rem;
+  }
+  
+  .roller{
+    height: 4rem;
+    line-height: 4rem;
+    position: relative;
+    overflow: hidden; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    /* -webkit-text-stroke: 0.1vw white; */
+    color: #36454F;
+  }
+  
+  
+  #spare-time{
+    font-size: 1rem;
+    font-style: italic;
+    letter-spacing: 1rem;
+    margin-top: 0;
+    color: #6699CC;
+    
+  }
+  
+  .roller #rolltext {
+    position: absolute;
+    top: 0;
+    animation: slide 5s infinite;  
+  }
+  
+  @keyframes slide {
+    0%{
+      top:0;
+    }
+    25%{
+      top: -4rem;    
+    }
+    50%{
+      top: -8rem;
+    }
+    72.5%{
+      top: -12.25rem;
+    }
+  }
+  
+  @media screen and (max-width: 600px){
+    h1{
+    text-align:center;
+    text-transform: uppercase;
+    color: #F1FAEE; 
+    font-size: 2.125rem;
+  }
+    
+    .roller{
+    height: 2.6rem; 
+    line-height: 2.125rem;  
+    }
+    
+    #spare-time {
+      font-size: 1rem;
+      letter-spacing: 0.1rem;
+    }
+    
+    .roller #rolltext {  
+    animation: slide-mob 3s infinite;  
+  }
+    
+    @keyframes slide-mob {
+    0%{
+      top:0;
+    }
+    25%{
+      top: -2.125rem;    
+    }
+    50%{
+      top: -4.25rem;
+    }
+    72.5%{
+      top: -6.375rem;
+    }
+  }
+  }
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+  /* ------------------------- */
+
+  
+  
+</style>
+
+</body>
+</html>

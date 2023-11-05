@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input Page</title>
+</head>
+<body>
+    <!-- <h1>Enter Your Input</h1>
+    <input type="text" id="user-input" placeholder="Type your message...">
+    <button id="submit-button">Submit</button>
+
+    <script>
+        document.getElementById('submit-button').addEventListener('click', function() {
+            var userInput = document.getElementById('user-input').value;
+            // Send the user input to the server for processing
+            fetch('/process_input', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ userInput: userInput })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Redirect to the result page with the processed input
+                window.location.href = 'result?processedInput=' + encodeURIComponent(data.processedInput);
+            });
+        });
+    </script> -->
+    <p>{{input}}</p>
+</body>
+</html>
