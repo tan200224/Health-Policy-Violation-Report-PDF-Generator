@@ -32,6 +32,8 @@ The following **optional** features are implemented:
 - [ ] User can see the final product.
 
 
+## Screenshot
+
 ## License
 
     Copyright [2023] [Zhuohao Tan, put your names here]
