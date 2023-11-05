@@ -34,6 +34,9 @@ The following **optional** features are implemented:
 
 ## Screenshot
 
+<img width="461" alt="image" src="https://github.com/tan200224/HealthyPolicyViolationReport/assets/68765056/a389da47-cf3a-4a04-bc88-d28c50bcdaff">
+<img width="1276" alt="image" src="https://github.com/tan200224/HealthyPolicyViolationReport/assets/68765056/9dd35027-0618-43fc-8186-7481ebd48592">
+
 ## License
 
   Copyright [2023] [Zhuohao Tan, Raiyan Khalid, Diego Gonzalez]
