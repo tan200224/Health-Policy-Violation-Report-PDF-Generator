@@ -35,7 +35,7 @@ The following **optional** features are implemented:
 ## Screenshot
 
 <img width="461" alt="image" src="https://github.com/tan200224/HealthyPolicyViolationReport/assets/68765056/a389da47-cf3a-4a04-bc88-d28c50bcdaff">
-<img width="1276" alt="image" src="https://github.com/tan200224/HealthyPolicyViolationReport/assets/68765056/9dd35027-0618-43fc-8186-7481ebd48592">
+<img width="1273" alt="image" src="https://github.com/tan200224/HealthyPolicyViolationReport/assets/68765056/c7d49ccc-fffd-4bc7-b2a9-64f8a08004ac">
 
 ## License
 
