@@ -39,7 +39,7 @@ The following **optional** features are implemented:
 
 ## License
 
-  Copyright [2023] [Zhuohao Tan, Raiyan Khalid, Diego Gonzalez]
+  Copyright [2023] [Zhuohao Tan, Raiyan Khalid, Diego Gonzalez, Ryan Manna]
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
