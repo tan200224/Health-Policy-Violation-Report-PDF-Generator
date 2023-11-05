@@ -3,7 +3,7 @@
 
 **What is the Medical Policy Violation Report Generator?** 
 
-The Medical Policy Violation Report Generator is used to help officers in the healthcare field write or produce Policy Violation Reports in a more convenient way. The medical professional or medical officers are able to provide the context of the incident, and the Medical Policy Violation Report Generator will be able to analyze that information based on the level of violation and PHI, and it will automatically generate a nice written report in a pdf format
+The Medical Policy Violation Report Generator is used to help officers in the healthcare field write or produce Policy Violation Reports in a more convenient way. The medical professional or medical officers are able to provide the context of the incident, and the Medical Policy Violation Report Generator will be able to analyze that information based on the level of violation and PHI, and it will automatically generate a nice written report in a pdf format.
 
 Time spent: **20** hours spent in total
 
@@ -12,6 +12,21 @@ Time spent: **20** hours spent in total
 The following **required** functionality is completed:
 
 - [x] User can access OpenAI API to generate information to fill out a PDF Violation Policy Form.
-- [x] The user can input different information on the employee-inputting the violation, the name of the employee and their record)
+- [x] The user can input different information on the employee-inputting the violation, the name of the employee, and their record)
 - [ ] User can obtain a PDF template of all of the information need to conduct an investigation)
-- [x] create a website that withholds User Interface and the AI chat box
+- [x] Create a website that withholds the User Interface and the AI chat box
+
+
+The following **optional** features are implemented:
+
+- [x] User sees a homepage with the chatbox implemented onto the screen 
+- [ ] Actually being able to input and export an updated PDF file
+- [ ] User can load more responses once he or she is performing a task
+- [ ] Show the PDF.
+- [x] User can input a specific text into the chat box.
+- [ ] User Access
+  - [x] Allow the logged-in user to add a prompt
+  - [x] Display AI-generated text
+  - [ ] Tapping into the PDF file and filling in the missing parts to have a complete Policy Form
+- [ ] Users can make changes to the PDF if they see something that they didn’t like or didn’t feel like needed to be there
+- [ ] User can see the final product.
