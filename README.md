@@ -37,6 +37,10 @@ The following **optional** features are implemented:
 <img width="461" alt="image" src="https://github.com/tan200224/HealthyPolicyViolationReport/assets/68765056/a389da47-cf3a-4a04-bc88-d28c50bcdaff">
 <img width="1273" alt="image" src="https://github.com/tan200224/HealthyPolicyViolationReport/assets/68765056/c7d49ccc-fffd-4bc7-b2a9-64f8a08004ac">
 
+# Result & Future Work
+During this 2-day hackathon, we weren't able to finish this project. There is more that can be done to improve this program, Including creating a better website or interface for the program and annotating the report so we can grab the text from OpenAI API to the corresponding location in the report. 
+
+
 ## License
 
   Copyright [2023] [Zhuohao Tan, Raiyan Khalid, Diego Gonzalez, Ryan Manna]
